@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 //        Leitura.ler("lorem.txt");
 
-//        SerializacaoEscrita.escrever();
-        SerializacaoLeitura.ler();
+        SerializacaoEscrita.escrever("receita2");
+        SerializacaoLeitura.ler("receita2.bin");
     }
 }
