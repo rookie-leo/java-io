@@ -1,3 +1,3 @@
 # java-io
 
-Repositório criado para o estudo de Java Streams, Readers e Writes
+Repositório criado para o estudo de Java Streams, Readers, Writes e Serializable.
