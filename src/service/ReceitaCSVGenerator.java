@@ -25,6 +25,7 @@ public class ReceitaCSVGenerator {
                 try {
                     String str = toCSV(receita);
                     bw.write(str);
+                    bw.newLine();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
