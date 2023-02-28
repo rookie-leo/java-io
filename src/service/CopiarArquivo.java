@@ -1,25 +1,17 @@
 package service;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Reader;
-import java.io.Writer;
+import java.io.*;
 
 public class CopiarArquivo {
 
 	public static void copiar(String fileName) throws IOException {
 		
 //		Socket s = new Socket();		
-		InputStream fis = System.in; //new FileInputStream("lorem.txt");
+		InputStream fis = new FileInputStream(fileName);
 		Reader isr = new InputStreamReader(fis);
 		BufferedReader br = new BufferedReader(isr);
 		
-		OutputStream fos = System.out;  //new FileOutputStream("lorem2.txt");
+		OutputStream fos = new FileOutputStream("copia.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
 		

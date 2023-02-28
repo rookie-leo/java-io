@@ -4,7 +4,7 @@ import entities.Receita;
 
 import java.io.*;
 
-public class SerializacaoLeitura {
+public class Desserializacao {
 
     public static void ler(String fileName) {
         try {

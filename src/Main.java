@@ -1,13 +1,15 @@
-import service.SerializacaoEscrita;
-import service.SerializacaoLeitura;
+import service.LeitorCSV;
+import service.Serializacao;
+import service.Desserializacao;
 
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
 //        Leitura.ler("lorem.txt");
+        LeitorCSV.ler("contas.csv");
 
-        SerializacaoEscrita.escrever("receita2");
-        SerializacaoLeitura.ler("receita2.bin");
+        Serializacao.escrever("receita", "Pagamento", 2660.99);
+        Desserializacao.ler("receita.bin");
     }
 }

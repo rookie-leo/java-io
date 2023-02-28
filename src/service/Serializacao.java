@@ -6,13 +6,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
-public class SerializacaoEscrita {
+public class Serializacao {
 
-    public static void escrever(String fileName) {
+    public static void escrever(String fileName, String descricao, Double valor) {
         Receita receita = new Receita();
-        receita.setDescricao("Pagamento");
-        receita.setValor(new BigDecimal(2015.09));
+        receita.setDescricao(descricao);
+        receita.setValor(BigDecimal.valueOf(valor).setScale(2, RoundingMode.HALF_EVEN));
 
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName+".bin"));
