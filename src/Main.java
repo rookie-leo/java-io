@@ -1,15 +1,14 @@
-import service.LeitorCSV;
-import service.Serializacao;
-import service.Desserializacao;
+import entities.Receita;
+import service.*;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-//        Leitura.ler("lorem.txt");
-        LeitorCSV.ler("contas.csv");
-
-        Serializacao.escrever("receita", "Pagamento", 2660.99);
-        Desserializacao.ler("receita.bin");
+//        ReceitaCSVGenerator.csvGenerator(List.of((new Receita("Pagamento", BigDecimal.valueOf(2015.99).setScale(2, RoundingMode.HALF_EVEN)))));
+        LeitorCSVReceita.ler("receita.csv");
     }
 }
